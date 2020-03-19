@@ -6,9 +6,9 @@ const TeamCard = (props) => {
 
     return (
         <div className="team-card-container">
-            <h2 className="team-card-container__name">Team Name</h2>
-            <p className="team-card-container__email">Email@email.com</p>
-            <p className="team-card-container__position"> Team Position</p>
+            <h2 className="team-card-container__name">{props.user.name}</h2>
+            <p className="team-card-container__email">{props.user.email}</p>
+            <p className="team-card-container__position">{props.user.title}</p>
         </div>
     )
 }

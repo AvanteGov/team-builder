@@ -1,19 +1,25 @@
-import React, { useState } from "react";
+import React from "react";
+import TeamCard from "./teamCard";
 
-const TeamContainer = () => {
+const TeamContainer = (props) => {
 
-    const [ userInfo, setUserInfo ] = useState([{
-            name: "Alex Couts",
-            email: "alexcouts18@gmail.com",
-            title: "Op Director"
-        }
-    ])
+    // const [ userInfo, setUserInfo ] = useState([{
+    //         name: "Alex Couts",
+    //         email: "alexcouts18@gmail.com",
+    //         title: "Op Director"
+    //     }
+    // ])
     
-    console.log(userInfo);
+    // console.log(props);
 
+    // for each user, return a TeamCard component with that user's info
     return (
         <div className="card-container">
-            <span>I am the team container!</span>
+            {props.users.map((item) =>  {
+                return (
+                    <TeamCard user={item} key={item.id} />
+                )
+            })}
         </div>
     )
 }
