@@ -15,13 +15,14 @@ function App() {
     }
   ]);
 
- const addMemberHAndler = (newMember) => {
-    console.log("adding memeber", newMember);
-
+ const addMemberHandler = (newMember) => {
+    console.log("adding member", newMember);
+    newMember.preventDefault()
     // updates the state of the array of users
     setUsersInfo([...usersInfo, newMember]);
  }
 
+  // console.log(usersInfo);
 
   return (
     <div className="App">
@@ -31,7 +32,11 @@ function App() {
          <TeamContainer users={usersInfo} />
        )
      }} />
-     <Route path="/formpage" component={FormPage} />
+     <Route path="/formpage" component={() => {
+       return (
+         <FormPage functionality={addMemberHandler} />
+       )
+     }} />
     </div>
   );
 }
