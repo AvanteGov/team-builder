@@ -2,7 +2,7 @@ import React from "react";
 
 const TeamCard = (props) => {
 
-    // console.log(props);
+    console.log(props);
 
     return (
         <div className="team-card-container">
