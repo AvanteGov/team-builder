@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 
 const FormPage = (props) => {
@@ -11,7 +11,7 @@ const FormPage = (props) => {
         setUserInput(event.target.value);
     }
 
-    // console.log(userInput)
+    console.log(userInput)
 
 
 
@@ -27,7 +27,7 @@ const FormPage = (props) => {
             <input onChange={userInputChange} className="form-page-component__input-field" type="text" name="user-title" id="user-title-id" placeholder="Position Title"></input>
 
             <label className="form-page-component__submit-button-label" htmlFor="user-submit-button-id"></label>
-            <button onChange={props.functionality} className="form-page-component__submit-button" name="user-submit-button" id="user-submit-button-id">Submit</button>
+            <button onClick={props.addMember} type="submit" className="form-page-component__submit-button" name="user-submit-button" id="user-submit-button-id">Submit</button>
         </form>
     )
 }

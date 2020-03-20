@@ -1,7 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom"
-import TeamContainer from "./teamContainer";
-import FormPage from "./formPage";
+import { Link } from "react-router-dom"
 
 const NavComponent = () => {
 
@@ -23,14 +21,5 @@ const NavComponent = () => {
         </div>
     )
 }
-
-//  <Link to={`/movies/${movie.id}`} render={(props) => {
-//     return <Movie />
-// }}>
-
-//   <h2>{title}</h2>
-// </Link>
-
-
 
 export default NavComponent 

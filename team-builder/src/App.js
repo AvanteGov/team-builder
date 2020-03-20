@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Route } from "react-router-dom";
 import './App.css';
 import NavComponent from "./components/navComponent";
@@ -8,7 +8,6 @@ import TeamContainer from "./components/teamContainer";
 function App() {
 
   const [ usersInfo, setUsersInfo ] = useState([{
-      id:  0,
       name: "Alex Couts",
       email: "alexcouts18@gmail.com",
       title: "Op Director"
@@ -16,13 +15,13 @@ function App() {
   ]);
 
  const addMemberHandler = (newMember) => {
-    console.log("adding member", newMember);
+    // console.log("adding member", newMember);
     newMember.preventDefault()
     // updates the state of the array of users
     setUsersInfo([...usersInfo, newMember]);
  }
 
-  // console.log(usersInfo);
+  console.log(usersInfo);
 
   return (
     <div className="App">
@@ -34,7 +33,7 @@ function App() {
      }} />
      <Route path="/formpage" component={() => {
        return (
-         <FormPage functionality={addMemberHandler} />
+         <FormPage addMember={addMemberHandler}/>
        )
      }} />
     </div>
