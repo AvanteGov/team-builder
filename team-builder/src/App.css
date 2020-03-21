@@ -20,3 +20,44 @@
 .navigation-container a :hover { 
   color: lightseagreen;
 }
+
+.card-container {
+  margin: 0 auto;
+  width: 80%;
+}
+
+.team-card-container {
+  margin-bottom: 3%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  vertical-align: middle;
+  border: 3px solid lightgrey;
+  border-radius: 20px;
+}
+
+.team-card-container__name {
+  font-family: 'Baloo Tammudu 2', cursive;
+
+}
+
+.user-form {
+  width: 40%;
+  height: 40vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.user-form__label {
+  font-family: 'Baloo Tammudu 2', cursive;
+  font-size: 1.6rem;
+
+}
+
+.user-form__input {
+  width: 60%;
+  height: 30px;
+}
